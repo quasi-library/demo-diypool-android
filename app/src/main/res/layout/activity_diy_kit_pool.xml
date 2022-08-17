@@ -8,10 +8,57 @@
         android:layout_height="match_parent"
         tools:context=".ui">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/title"
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="0dp"
+            android:background="@color/app_main_warning_red"
+            app:layout_constraintBottom_toTopOf="@id/summaryArea"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/weeklyAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:background="@color/app_main_warning_red">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/weeklyCollapsingToolBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentScrim="@color/app_main_white"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/topBannerImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@color/dark_yellow"
+                        android:text="showTime"
+                        app:layout_collapseMode="parallax" />
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="80dp"
+                android:background="@color/app_background_listview_white"
+                tools:itemCount="12"
+                tools:listitem="@layout/section_diy_choose_nor" />
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/summaryArea"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/app_main_green"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
