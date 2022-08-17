@@ -1,4 +1,4 @@
-package com.quasi.template.demo.diypool.ui
+package com.quasi.demo.diypool.ui
 
 import android.content.Intent
 import android.widget.ImageView

@@ -11,7 +11,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.snackbar.Snackbar
 import com.quasi.demo.diypool.databinding.ActivityMainBinding
-import com.quasi.template.demo.diypool.ui.DiyKitPoolActivity
+import com.quasi.demo.diypool.ui.DiyKitPoolActivity
 
 class MainActivity : AppCompatActivity() {
 

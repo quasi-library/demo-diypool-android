@@ -1,12 +1,14 @@
-package com.quasi.template.demo.diypool.ui
+package com.quasi.demo.diypool.ui
 
 import android.util.Log
-import com.quasi.template.demo.diypool.base.VSBaseViewModel
-import com.quasi.template.demo.diypool.base.VSResponseModel
-import com.quasi.template.demo.diypool.model.DiyCombinationModel
+import com.google.gson.Gson
 import com.quasi.demo.diypool.model.DiyPoolModel
 import com.quasi.demo.diypool.model.DiyPoolRespData
 import com.quasi.demo.diypool.model.PoolVariantModel
+import com.quasi.demo.diypool.model.VSResponseModel
+import com.quasi.template.demo.diypool.base.VSBaseViewModel
+import com.quasi.template.demo.diypool.base.vsGetAssets
+import com.quasi.template.demo.diypool.model.DiyCombinationModel
 
 /**
  * 自选池页面的数据及勾选逻辑
@@ -38,12 +40,13 @@ class DiyKitPoolViewModel : VSBaseViewModel() {
      * 从本地获取JSON
      */
     private fun mockData(): VSResponseModel<DiyPoolRespData> {
-        val jsonString = ""
+        // 解析JSON数据
+        val inputStream = vsGetAssets().open("mock.json")
+        val jsonString = String(inputStream.readBytes())
 
-        return VSResponseModel(
-            code = 0,
-            message = "请求成功",
-            data = DiyPoolRespData()
+        return Gson().fromJson<VSResponseModel<DiyPoolRespData>>(
+            jsonString,
+            VSResponseModel::class.java
         )
     }
 

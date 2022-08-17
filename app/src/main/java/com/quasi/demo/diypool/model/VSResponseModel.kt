@@ -1,4 +1,4 @@
-package com.quasi.template.demo.diypool.base
+package com.quasi.demo.diypool.model
 
 /// Api统一的返回结构
 class VSResponseModel<T>(var code: Int = 0, var message: String? = null, var data: T? = null) {
