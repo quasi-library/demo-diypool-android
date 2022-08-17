@@ -1,15 +1,11 @@
 package com.quasi.demo.diypool.ui
 
 import android.content.Intent
+import android.util.Log
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.drake.brv.BindingAdapter
-import com.drake.brv.utils.linear
-import com.drake.brv.utils.setup
 import com.quasi.demo.diypool.R
 import com.quasi.demo.diypool.databinding.ActivityDiyKitPoolBinding
-import com.quasi.demo.diypool.databinding.SectionDiyChooseNorBinding
-import com.quasi.demo.diypool.model.DiyPoolModel
 import com.quasi.template.demo.diypool.base.VSBaseActivity
 import com.quasi.template.demo.diypool.base.VSBaseBarItemView
 import com.quasi.template.demo.diypool.base.vsGetDrawable
@@ -52,7 +48,7 @@ class DiyKitPoolActivity : VSBaseActivity<ActivityDiyKitPoolBinding, DiyKitPoolV
         mViewModel.mDefaultIds = intent.getParcelableArrayListExtra(INTENT_EXTRA_DEFAULT_DATA)
 
         mViewModel.refreshListLiveData.observe(this) {
-            mListAdapter.models = it
+            Log.d(LOG_TAG, "数据通知界面刷新列表 $it")
         }
     }
     //</editor-fold>
@@ -98,23 +94,9 @@ class DiyKitPoolActivity : VSBaseActivity<ActivityDiyKitPoolBinding, DiyKitPoolV
         addRightBarItem(questionItem)
     }
 
-    private var mListAdapter = BindingAdapter()
-
     private fun addListView() {
         // 创建竖项列表
-        mListAdapter = mBinding.rv.linear().setup {
-            // 声明添加section头
-            addType<DiyPoolModel>(R.layout.section_diy_choose_nor)
 
-            // 视图和数据绑定
-            onBind {
-                // 标题行
-                val sectionBinding = this.getBinding<SectionDiyChooseNorBinding>()
-                val sectionModel = this.getModel<DiyPoolModel>()
-                sectionBinding.sectionTitleLabel.text =
-                    StringBuilder().append(sectionModel.title).append(" *")
-            }
-        }
     }
 
     //</editor-fold>

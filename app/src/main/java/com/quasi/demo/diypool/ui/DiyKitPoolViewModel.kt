@@ -33,12 +33,19 @@ class DiyKitPoolViewModel : VSBaseViewModel() {
      */
     var mSelectedIds: ArrayList<DiyCombinationModel>? = null
 
+    /**
+     * 记录当前展开的SectionId
+     */
+    var mExpandSection: String? = null
+
+
     //</editor-fold>
 
     //<editor-fold desc="Callback LiveData">
 
-    val refreshListLiveData: MutableLiveData<List<DiyPoolModel?>> =
-        MutableLiveData<List<DiyPoolModel?>>()
+    // 通知页面刷新列表,首次获取数据时传true，因局部操作刷新时传false
+    val refreshListLiveData: MutableLiveData<Boolean> =
+        MutableLiveData<Boolean>()
 
     //</editor-fold>
 
@@ -84,7 +91,7 @@ class DiyKitPoolViewModel : VSBaseViewModel() {
                     result.data!!.ventilationList,
                     result.data!!.accessoriesList
                 )
-                refreshListLiveData.postValue(sectionList)
+                refreshListLiveData.postValue(true)
             } else {
                 requestErrorLiveData.postValue("generate fail")
             }
@@ -92,6 +99,21 @@ class DiyKitPoolViewModel : VSBaseViewModel() {
     }
     //</editor-fold>
 
+    //<editor-fold desc="Public Method">
+    /**
+     * 点击section标题，展开或折叠当前区域
+     */
+    fun clickSectionTitle(sectionTitle: String) {
+        mExpandSection = if (mExpandSection == sectionTitle) {
+            null
+        } else {
+            sectionTitle
+        }
+        refreshListLiveData.postValue(false)
+    }
+    //</editor-fold>
+
+    //<editor-fold desc="Private Method">
     /**
      * 通过skuId反向查询skuModel，方便查询库存等
      */
@@ -114,5 +136,6 @@ class DiyKitPoolViewModel : VSBaseViewModel() {
 
         return skuModel
     }
+    //</editor-fold>
 
 }

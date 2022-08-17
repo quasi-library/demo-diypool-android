@@ -8,50 +8,59 @@
         android:layout_height="match_parent"
         tools:context=".ui">
 
-        <androidx.coordinatorlayout.widget.CoordinatorLayout
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/rv"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/app_main_warning_red"
+            android:background="@color/app_background_listview_white"
             app:layout_constraintBottom_toTopOf="@id/summaryArea"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/section_diy_choose_nor">
 
-            <com.google.android.material.appbar.AppBarLayout
-                android:id="@+id/weeklyAppBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                tools:background="@color/app_main_warning_red">
-
-                <com.google.android.material.appbar.CollapsingToolbarLayout
-                    android:id="@+id/weeklyCollapsingToolBar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:contentScrim="@color/app_main_white"
-                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/topBannerImage"
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="@color/dark_yellow"
-                        android:text="showTime"
-                        app:layout_collapseMode="parallax" />
-
-                </com.google.android.material.appbar.CollapsingToolbarLayout>
-            </com.google.android.material.appbar.AppBarLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv"
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="80dp"
-                android:background="@color/app_background_listview_white"
-                tools:itemCount="12"
-                tools:listitem="@layout/section_diy_choose_nor" />
+                android:orientation="vertical">
 
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="111111" />
 
-        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/chooseTentArea"
+                    android:name="com.quasi.demo.diypool.ui.DiyChooseTentFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/chooseLightArea"
+                    android:name="com.quasi.demo.diypool.ui.DiyChooseLightFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/chooseDFanArea"
+                    android:name="com.quasi.demo.diypool.FirstFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/chooseControllerArea"
+                    android:name="com.quasi.demo.diypool.SecondFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/chooseAccessoriesArea"
+                    android:name="com.quasi.demo.diypool.ui.DiyChooseTentFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/summaryArea"
