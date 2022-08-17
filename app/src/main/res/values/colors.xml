@@ -1,5 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="app_main_clear">#00000000</color>
+    <color name="app_main_white">#FFFFFFFF</color>
+    <color name="app_main_black">#FF000000</color>
+    <color name="app_main_black_231f20">#231f20</color>
+    <color name="app_main_black_percent_60">#99000000</color>
+    <color name="app_main_design_green">#FF14C355</color>
+    <color name="app_main_green">#FF14C355</color>
+    <color name="app_main_green_percent_60">#9914C355</color>
+    <color name="app_main_warning_red">#FFFF593C</color>
+    <color name="app_main_meter_blue">#FF49BAFF</color>
+    <color name="app_main_light_yellow">#FFC718</color>
+    <color name="app_main_c_fan_blue">#FF7ED5F1</color>
+    <color name="app_main_d_fan_purple">#FFA39EF1</color>
+
+    <color name="app_background_activity_white">#FFFFFFFF</color>
+    <color name="app_background_listview_white">#FFF8F8F8</color>
+    <color name="background_listview_gray">#FFF6F6F6</color>
+
+    <color name="app_line_separate">#FFF4F4F4</color>
+    <color name="listview_separator_line">#EEEEEE</color>
+
+    <color name="app_text_title">#111111</color>
+    <color name="app_text_subtitle">#999999</color>
+    <color name="app_text_body_normal">#CCCCCC</color>
+    <color name="app_text_body_disable">#DDDDDD</color>
+    <color name="app_text_empty_desc">#666666</color>
+
+    <color name="app_placeholder_image">#EBEBEB</color>
+
+    <color name="background_bar_pink">#FFEEEB</color>
+    <color name="background_bar_cyan">#E7F9EE</color>
+    <color name="background_tag_red">#1AFF593C</color>
+
+    <color name="btn_text_nor">#FFFFFF</color>
+    <color name="btn_bg_green_nor">#FF14C355</color>
+    <color name="btn_bg_green_unable">#8014C355</color>
+    <color name="label_sub_text_black">#C8C8C8</color>
+    <color name="label_desc_gray">#999999</color>
+    <color name="label_placeholder_gray">#666666</color>
+    <color name="text_field_placeholder_gray">#CCCCCC</color>
+    <color name="edittext_placeholder_gray">#C8C8C8</color>
+    <color name="label_link_green">#14C355</color>
+    <color name="label_warning_red">#FF593C</color>
+    <color name="line_bottom_gray">#E4E4E4</color>
+    <color name="view_partition_gray">#F4F4F4</color>
+    <color name="progress_nor_green">#FFE1F9EA</color>
+    <color name="progress_sel_green">#FF14C355</color>
+    <color name="light_blue_400">#FF29B6F6</color>
+    <color name="base_divide_line_color">#ebebeb</color>
+    <color name="circle_divide_gray">#D9D9D9</color>
+    <color name="circle_background_color">#CFCFCF</color>
+    <color name="circle_disable_color">#333333</color>
+    <color name="text_value_color">#241F20</color>
+    <color name="background_line_color">#D8D8D8</color>
+    <color name="main_icon_unselect_color">#E8E8E8</color>
+
+    <color name="button_main_text_black">#111111</color>
+    <color name="button_main_text_gary">#DDDDDD</color>
+
+    <color name="dark_yellow">#ffC300</color>
+
+    <color name="flow_layout_solid_unselected">#f6f6f6</color>
+
+    <color name="background_edit_border_color">#D6D6D6</color>
+
+    <color name="iot_light_main_color">#FFC718</color>
+    <color name="iot_c_fan_main_color">#7ED5F1</color>
+    <color name="iot_d_fan_main_color">#A39EF1</color>
+
+    <color name="seekbar_low_chosen_color">#49BAFF</color>
+    <color name="iot_plan_light_pointer_color">#EFE4C1</color>
+    <color name="iot_plan_c_fan_pointer_color">#D5E7EC</color>
+    <color name="iot_plan_d_fan_pointer_color">#DDDCEC</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="half_transparent">#80000000</color>
+    <color name="iot_light_normal_color">#FFFFEFB9</color>
+    <color name="iot_d_fan_normal_color">#E3E1FA</color>
+    <color name="iot_c_fan_normal_color">#D8F2FA</color>
+    <color name="gray_600">#FF757575</color>
+    <color name="green_114625">#114625</color>
+    <color name="black_231f20">#231f20</color>
+    <color name="gray_9f9f9f">#9f9f9f</color>
+    <color name="red_6f5">#FFF6F5</color>
+
 </resources>

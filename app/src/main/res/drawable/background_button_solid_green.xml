@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--实心按钮的背景色，可用时深绿，不可用时淡绿-->
+    <item android:drawable="@color/app_main_green" android:state_enabled="true" />
+    <item android:drawable="@color/btn_bg_green_unable" android:state_enabled="false" />
+</selector>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 自定义按钮 -->
+    <!-- 实心绿底白字按钮 -->
+    <style name="button_solid_green">
+        <item name="android:background">@drawable/background_button_solid_green</item>
+        <item name="android:fontFamily">@font/abc_diatype_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingHorizontal" tools:targetApi="o">5dp</item>
+        <item name="android:paddingVertical" tools:targetApi="o">2dp</item>
+        <item name="android:radius">2dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/btn_text_nor</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- 实心白底红字按钮 -->
+    <style name="button_solid_warning">
+        <item name="android:background">@color/app_main_white</item>
+        <item name="android:fontFamily">@font/abc_diatype_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingHorizontal" tools:targetApi="o">5dp</item>
+        <item name="android:paddingVertical" tools:targetApi="o">2dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/label_warning_red</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- 实心黑底白字按钮 -->
+    <style name="button_solid_black">
+        <item name="android:background">@drawable/background_button_solid_black</item>
+        <item name="android:fontFamily">@font/abc_diatype_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingHorizontal" tools:targetApi="o">5dp</item>
+        <item name="android:paddingVertical" tools:targetApi="o">2dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/app_main_white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--   按钮无法点击的样式-->
+    <style name="button_solid_disable">
+        <item name="android:background">@color/flow_layout_solid_unselected</item>
+        <item name="android:fontFamily">@font/abc_diatype_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingHorizontal" tools:targetApi="o">5dp</item>
+        <item name="android:paddingVertical" tools:targetApi="o">2dp</item>
+        <item name="android:radius">2dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/app_main_white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--空心黑边黑字按钮-->
+    <style name="button_hollow_black">
+        <item name="android:background">@drawable/background_hollow_black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingHorizontal" tools:targetApi="o">5dp</item>
+        <item name="android:paddingVertical" tools:targetApi="o">2dp</item>
+        <item name="android:radius">2dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/app_text_title</item>
+    </style>
+
+    <!-- 自定义文本输入框 -->
+    <style name="edit_text_float_label" parent="TextAppearance.AppCompat">
+        <!--  默认状态下悬浮标签的标题颜色/字体大小  -->
+        <item name="android:textColorHint">@color/label_placeholder_gray</item>
+        <item name="android:textSize">14sp</item>
+        <!-- 标签的颜色 -->
+        <item name="colorAccent">#c6174e</item>
+        <!-- 默认状态下底线颜色 -->
+        <item name="colorControlNormal">@color/line_bottom_gray</item>
+        <!-- 选中状态下底线颜色 -->
+        <item name="colorControlActivated">@color/app_text_title</item>
+        <!-- 最大行数 -->
+        <item name="android:inputType">text</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!-- 自定义标签 TextAppearance,以下按字体从大到小/从粗到细排列 -->
+    <style name="label_nav_title_text" parent="android:style/TextAppearance">
+        <!--  默认状态下"导航栏标题"标签的标题颜色/字体大小  -->
+        <item name="android:textColor">@color/app_text_title</item>
+        <item name="android:fontFamily">@font/abc_diatype_bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="label_alert_title_text" parent="android:style/TextAppearance">
+        <!--  弹框(Dialog)标题及按钮颜色/字体大小  -->
+        <item name="android:textColor">@color/app_text_title</item>
+        <item name="android:fontFamily">@font/abc_diatype_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="label_sub_title_text" parent="android:style/TextAppearance">
+        <!--  默认状态下"二级标题/强调文本"标签的标题颜色/字体大小  -->
+        <item name="android:textColor">@color/app_text_title</item>
+        <item name="android:fontFamily">@font/abc_diatype_medium</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="label_section_title_text" parent="android:style/TextAppearance">
+        <!--  默认状态下"段落标题"标签的标题颜色/字体大小  -->
+        <item name="android:textColor">@color/app_text_title</item>
+        <item name="android:fontFamily">@font/abc_diatype_bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="label_empty_title_text" parent="android:style/TextAppearance">
+        <!--  默认状态下空页面的标题文本童年颜色/字体大小  -->
+        <item name="android:textColor">@color/app_text_title</item>
+        <item name="android:fontFamily">@font/abc_diatype_medium</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="label_bottom_dialog_title_text" parent="android:style/TextAppearance">
+        <!--  底部弹框的"标题"文本颜色/字体大小  -->
+        <item name="android:textColor">@color/app_text_title</item>
+        <item name="android:fontFamily">@font/abc_diatype_medium</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="label_empty_desc_text" parent="android:style/TextAppearance">
+        <!--  默认状态下空页面的描述文本颜色/字体大小  -->
+        <item name="android:textColor">@color/app_text_empty_desc</item>
+        <item name="android:fontFamily">@font/abc_diatype_regular</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="label_body_text" parent="android:style/TextAppearance">
+        <!--  默认状态下正文标签的标题颜色/字体大小  -->
+        <item name="android:textColor">@color/app_text_title</item>
+        <item name="android:fontFamily">@font/abc_diatype_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="label_item_title_text" parent="android:style/TextAppearance">
+        <!--  默认状态下列表单行的标题颜色/字体大小  -->
+        <item name="android:textColor">@color/app_text_title</item>
+        <item name="android:fontFamily">@font/abc_diatype_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="label_item_desc_text" parent="android:style/TextAppearance">
+        <!--  默认状态下列表单行的描述文本颜色/字体大小  -->
+        <item name="android:textColor">@color/label_desc_gray</item>
+        <item name="android:fontFamily">@font/abc_diatype_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="label_float_text" parent="android:style/TextAppearance">
+        <!--  悬浮状态下标题标签的文本颜色/字体大小  -->
+        <item name="android:fontFamily">@font/abc_diatype_regular</item>
+        <item name="android:textColor">@color/label_placeholder_gray</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="label_warning_text" parent="android:style/TextAppearance">
+        <!--  默认状态下报错提示标签的标题颜色/字体大小  -->
+        <item name="android:fontFamily">@font/abc_diatype_regular</item>
+        <item name="android:textColor">@color/label_warning_red</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="label_main_title_text" parent="android:style/TextAppearance">
+        <!--  默认状态下大标题标签的标题颜色/字体大小  -->
+        <item name="android:textColor">@color/app_text_title</item>
+        <item name="android:fontFamily">@font/helvetica_neue_condensed_bold</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="label_tag_text" parent="android:style/TextAppearance">
+        <!--  默认状态下"商品图片tag小标签"的文本颜色/字体大小  -->
+        <item name="android:fontFamily">@font/abc_diatype_bold</item>
+        <item name="android:textColor">@color/label_warning_red</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="label_body_warn_text" parent="android:style/TextAppearance">
+        <!--  默认状态下红色正文字体  -->
+        <item name="android:fontFamily">@font/abc_diatype_regular</item>
+        <item name="android:textColor">@color/label_warning_red</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="label_address_title_text" parent="label_item_title_text">
+        <!--  地址页面标题文本颜色/字体大小  -->
+        <item name="android:textColor">@color/label_placeholder_gray</item>
+        <item name="android:fontFamily">@font/abc_diatype_regular</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+
+    <style name="label_address_desc_text" parent="label_item_desc_text">
+        <!--  地址页面标题文本颜色/字体大小  -->
+        <item name="android:textColor">@color/app_text_title</item>
+        <item name="android:fontFamily">@font/abc_diatype_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <!-- 自定义分段选择器 TextAppearance.Design.Tab -->
+    <style name="tab_layout_segment_black" parent="TextAppearance.Design.Tab">
+        <!--  默认状态下列表单行的描述文本颜色/字体大小  -->
+        <item name="android:fontFamily">@font/abc_diatype_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/label_desc_gray</item>
+        <item name="android:textSize">14sp</item>
+        <item name="tabIndicatorColor">@color/app_main_black</item>
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabIndicatorGravity">bottom</item>
+        <item name="tabSelectedTextColor">@color/app_text_title</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="switchStyle" parent="Theme.AppCompat.Light">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/app_main_white</item>
+    </style>
+
+    <!--  加车动画中 圆形图片 -->
+    <style name="RoundAndCutImageStyle">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <!--  文本前段落标记 圆点 -->
+    <style name="RoundDotImageStyle">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="RedTagViewStyle">
+        <item name="cornerSize">2dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="SquareCheckBoxStyle" parent="android:Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/state_checkbox_square_black</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="CircularCheckBoxStyle" parent="android:Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/state_checkbox_circular_black</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+</resources>

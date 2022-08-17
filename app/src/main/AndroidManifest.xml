@@ -4,6 +4,7 @@
     package="com.quasi.demo.diypool">
 
     <application
+        android:name=".base.VSApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -24,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.quasi.template.demo.diypool.ui.DiyKitPoolActivity" />
     </application>
 
 </manifest>

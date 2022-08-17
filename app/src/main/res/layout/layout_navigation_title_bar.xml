@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/vsNavBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/app_text_title"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp"
+        tools:background="@color/purple_200">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/titleBarCenterContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:background="@color/app_main_light_yellow">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleBarTitleLabel"
+                style="@style/label_nav_title_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:maxWidth="200dp"
+                android:maxLines="1"
+                android:textColor="@color/app_main_design_green"
+                tools:background="@color/app_main_warning_red"
+                tools:text="this is title" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/titleBarBackItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nav_icon_back_black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/background_main_green"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/titleBarLeftContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingEnd="15dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/titleBarCenterContainer"
+            app:layout_constraintStart_toEndOf="@+id/titleBarBackItem"
+            tools:background="@color/teal_200"
+            tools:ignore="RtlSymmetry"
+            tools:visibility="visible">
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/titleBarRightContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:paddingStart="15dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:background="@color/teal_200"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

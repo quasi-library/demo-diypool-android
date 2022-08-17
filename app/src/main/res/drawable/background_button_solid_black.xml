@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--实心按钮的背景色，可用时黑色，不可用时灰色-->
+    <item android:drawable="@color/app_main_black" android:state_enabled="true" />
+    <item android:drawable="@color/app_text_subtitle" android:state_enabled="false" />
+</selector>
